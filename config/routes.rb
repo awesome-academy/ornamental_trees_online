@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'user/new'
-
+  root "users#new"
+  resources :users
 end
