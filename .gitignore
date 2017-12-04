@@ -10,6 +10,7 @@ capybara-*.html
 /spec/tmp
 *.orig
 rerun.txt
+/.idea/
 pickle-email-*.html
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
