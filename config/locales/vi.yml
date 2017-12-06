@@ -1,0 +1,10 @@
+vi:
+  sessions:
+    new:
+      email: "Email"
+      password: "mật khẩu"
+      loggin: "Đăng nhập"
+      new_user: "chưa có tài khoản"
+      signup: "Đăng ký"
+    create:
+      danger: "email / mật khẩu không hợp lệ"

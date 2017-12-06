@@ -1,1 +1,10 @@
 en:
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      loggin: "Log in"
+      new_user: "New user?"
+      signup: "Sign up now"
+    create:
+      danger: "invalid email/password combination"
