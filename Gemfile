@@ -14,7 +14,21 @@ gem "sass-rails", "~> 5.0"
 gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'uglifier', '>= 1.3.0'
+gem 'therubyracer', platforms: :ruby
+
+
+gem 'jquery-rails'
+gem 'materialize-sass'
+
+gem 'toastr-rails'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass'
+
+
 gem "i18n", "~> 0.7.0"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "capybara", "~> 2.13"
