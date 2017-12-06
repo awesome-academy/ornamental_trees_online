@@ -1,0 +1,68 @@
+<header>
+  <ul id="dropdown1" class="dropdown-content">
+    <li class="item_category_mobile">
+      <%= link_to root_path do %>
+        <i class="material-icons md-24 icon-cate-in-mobile">settings</i><%= t ".setting" %>
+      <% end %>
+    </li>
+
+    <li class="item_category_mobile">
+      <%= link_to root_path do %>
+        <i class="material-icons md-24 icon-cate-in-mobile">history</i><%= t ".history_order" %>
+      <% end %>
+    </li>
+
+    <li class="divider"></li>
+    <li class="item_category_mobile">
+      <%= link_to root_path, method: :delete, title: 'Logout' do %>
+        <i class="material-icons md-24 icon-cate-in-mobile">settings_power</i><%= t ".logout" %>
+      <% end %>
+    </li>
+  </ul>
+
+  <nav class="cyan darken-3 z-depth-2" id="nav-header-shop">
+    <div class="container" id="customize-home-container">
+      <div class="nav-wrapper">
+        <%= link_to image_tag('logo.png'), root_path, class: 'brand-logo' %>
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <a class="link-to-item-header" href="#">
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icon-in-top-menu">device_hub</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".product" %></li>
+              </a>
+            </ul>
+          </li>
+
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <a class="link-to-item-header" href="#">
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icon-in-top-menu">account_circle</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".signup" %></li>
+              </a>
+            </ul>
+          </li>
+
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to login_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icon-in-top-menu">forward</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".login" %></li>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

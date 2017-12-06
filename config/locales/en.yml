@@ -21,6 +21,9 @@ en:
       loggin: "Log in"
       new_user: "New user?"
       signup: "Sign up now"
+      login_google: "Log in with Google"
+      login_facebook: "Log in with Facebook"
+      login_twiiter: "Log in with Twiiter"
     create:
       danger: "invalid email/password combination"
   product:
@@ -28,3 +31,19 @@ en:
       buy: "Buy now"
       name: "Product Name:"
       price: "Price:"
+  layouts:
+    application:
+      title: "Love Flower"
+    header:
+      product: "Products"
+      login: "Login"
+      signup: "Sign Up"
+      setting: "Account Settings"
+      history_order: "History Orders"
+      logout: "Logout"
+    footer:
+      logo: "Sun Flower"
+      connect: "Connect us"
+      about_us: "About Us"
+      help: "Help"
+      terms: "Terms of Use"

@@ -1,6 +1,6 @@
 <h1><%= t ".signup" %></h1>
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col l6">
     <%= form_for(@user) do |f| %>
 
       <%= f.label :username, (t ".username") %>
@@ -28,7 +28,7 @@
       <%= f.radio_button :gender, 0 %><label for="user_gender_0"><%= t ".male" %></label>
       <%= f.radio_button :gender, 1 %><label for="user_gender_1"><%= t ".female" %></label>
 
-      <%= f.submit "Sign Up", class: "btn btn-primary" %>
+      <%= f.submit "Sign Up", class: "btn" %>
     <% end %>
   </div>
 </div>

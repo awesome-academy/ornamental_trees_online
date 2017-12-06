@@ -21,6 +21,9 @@ vi:
       loggin: "Đăng nhập"
       new_user: "chưa có tài khoản"
       signup: "Đăng ký"
+      login_google: "Log in with Google"
+      login_facebook: "Log in with Facebook"
+      login_twiiter: "Log in with Twiiter"
     create:
       danger: "email / mật khẩu không hợp lệ"
   product:
@@ -28,3 +31,19 @@ vi:
       buy: "Mua ngay"
       name: "Tên sản phẩm:"
       price: "Giá:"
+  layouts:
+    application:
+      title: "Hoa Yeu Thuong"
+    header:
+      product: "Sản Phẩm"
+      login: "Đăng Nhập"
+      signup: "Đăng Kí"
+      setting: "Cài Đặt"
+      history_order: "Lịch sử mua hàng"
+      logout: "Đăng xuất"
+    footer:
+      logo: "Sun Flower"
+      connect: "Connect us"
+      about_us: "About Us"
+      help: "Help"
+      terms: "Terms of Use"
