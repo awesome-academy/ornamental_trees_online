@@ -23,3 +23,8 @@ en:
       signup: "Sign up now"
     create:
       danger: "invalid email/password combination"
+  product:
+    show:
+      buy: "Buy now"
+      name: "Product Name:"
+      price: "Price:"
