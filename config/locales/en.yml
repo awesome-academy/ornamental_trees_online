@@ -1,5 +1,5 @@
 en:
-  user:
+  users:
     new:
       username: "Username"
       email: "Email"
@@ -26,11 +26,12 @@ en:
       login_twiiter: "Log in with Twiiter"
     create:
       danger: "invalid email/password combination"
-  product:
+  products:
     show:
       buy: "Buy now"
       name: "Product Name:"
-      price: "Price:"
+      price: "Price: "
+      category: "Category:"
   layouts:
     application:
       title: "Love Flower"

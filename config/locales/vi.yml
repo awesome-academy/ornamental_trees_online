@@ -26,11 +26,12 @@ vi:
       login_twiiter: "Log in with Twiiter"
     create:
       danger: "email / mật khẩu không hợp lệ"
-  product:
+  products:
     show:
       buy: "Mua ngay"
       name: "Tên sản phẩm:"
-      price: "Giá:"
+      price: "Giá: "
+      category: "Phân loại:"
   layouts:
     application:
       title: "Hoa Yeu Thuong"

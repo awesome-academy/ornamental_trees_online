@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
-  get "products/index"
-  get "products/show"
-  get    "/login",   to: "sessions#new"
+
+  get    "/login",    to: "sessions#new"
   post    "/login",   to: "sessions#create"
   delete  "/logout",  to: "sessions#destroy"
-  get "/signup" => "users#new"
-  post "/signup", to: "users#create"
+  get "/signup",      to: "users#new"
+  post "/signup",     to: "users#create"
+  get "/about",       to: "static_pages#about"
+  get    "/login",    to: "sessions#new"
+  post    "/login",   to: "sessions#create"
+  delete  "/logout",  to: "sessions#destroy"
+  resources :products
   resources :users
 
-  get "static_pages/about"
-  get    "/login",   to: "sessions#new"
-  post    "/login",   to: "sessions#create"
-  delete  "/logout",  to: "sessions#destroy"
-
-  root to: "static_pages#home"
+  root "static_pages#home"
 end
