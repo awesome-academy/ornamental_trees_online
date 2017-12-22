@@ -110,12 +110,15 @@ en:
           quantity: "Quantity"
           detele: "Detele"
           edit: "Edit"
+<<<<<<< HEAD
       header:
         product: "Products"
         signup: "Sign Up"
         login: "Login"
         user: "User"
         logout: "Logout"
+=======
+>>>>>>> e53d48d669c84746a720200bb1e01b827aa9efc1
     static_pages:
       home:
         search: "Type and ENTER for search"
