@@ -6,4 +6,10 @@ class Product < ApplicationRecord
   has_many :carts
 
   validates :name, presence: true
+
+  scope :search_by_name, (lambda do |name|
+    where('name LIKE ?', "%#{name}%")
+  end)
+
+  scope :order_desc, -> {order created_at: :desc}
 end

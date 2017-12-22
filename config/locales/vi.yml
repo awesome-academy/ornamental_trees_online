@@ -109,9 +109,15 @@ vi:
         quantity: "Số lượng"
         detele: "Xóa"
         edit: "Sửa"
+<<<<<<< HEAD
     header:
         product: "Sản phẩm"
         signup: "Đăng ký"
         login: "Đăng nhập"
         user: "Tài khoản"
         logout: "Đăng xuất"
+=======
+>>>>>>> e53d48d669c84746a720200bb1e01b827aa9efc1
+  static_pages:
+    home:
+      search: "Nhập và Enter để tìm kiếm"
