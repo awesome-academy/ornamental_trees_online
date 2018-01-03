@@ -12,7 +12,7 @@
       <% end %>
         <div class="card-action">
           <div class="row">
-            <%= form_for :shopping_cart, url: shopping_cart_path, remote: true do |f| %>
+            <%= form_for :cart, url: shopping_cart_path, remote: true do |f| %>
               <div class="col s6 l4">
                 <%= product.price %>
               </div>

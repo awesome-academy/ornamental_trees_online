@@ -14,5 +14,4 @@
 //= require jquery_ujs
 //= require materialize
 //= require materialize-sprockets
-//= require rails-ujs
 //= require_tree .

@@ -9,11 +9,13 @@
   </tr>
   </thead>
   <tbody>
-    <% @products.each do |item| %>
     <%
-      product = item[0]
-      quantity = item[1]
-    %>
+    unless @carts.nil?
+      @carts.each do |cart| %>
+      <%
+        product = cart.product
+        quantity = cart.quantity
+      %>
       <tr>
         <td id="td-table-image-item">
         </td>
@@ -31,16 +33,19 @@
         </td>
 
         <td>
-          <%= link_to (t ".delete"), shopping_cart_path(product_id: product.id), method: :delete %>
+          <%= link_to (t ".Delete"), shopping_cart_path(product_id: product.id) , method: :delete %>
         </td>
 
       </tr>
-    <% end %>
+
+    <% end
+    end%>
       <tr class="total_line">
         <td>&nbsp;</td>
         <td class="td-table-space-total">&nbsp;</td>
         <td class="center"><b><%= t".total"%></b></td>
         <td class="td-table-space-total">&nbsp;</td>
+
       </tr>
   </tbody>
 </table>

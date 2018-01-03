@@ -1,23 +1,19 @@
 class ShoppingCartsController < ApplicationController
   def show
-    @products = []
-    unless session[:shoppingcart].nil?
-      session[:shoppingcart].each do |product_id, quantity,|
-        @products << [Product.find(product_id), quantity,]
-      end
-    end
+    @carts = Cart.where session_id: request.session_options[:id]
   end
 
   def create
-    if session[:shoppingcart].nil?
-      session[:shoppingcart] = Hash.new
-    end
-    product_id = params[:shopping_cart][:product_id]
-
-    if session[:shoppingcart].key?(product_id)
-      session[:shoppingcart][product_id] = session[:shoppingcart][product_id] + 1
+    session_id = request.session_options[:id]
+    cart = Cart.find_by session_id: session_id, product_id: params[:cart][:product_id]
+    if cart.nil?
+      cart = Cart.new cart_params
+      cart.session_id = session_id
+      cart.quantity = 1
+      cart.save!
     else
-      session[:shoppingcart][product_id] = 1
+      cart.quantity = cart.quantity + 1
+      cart.save!
     end
   end
 
