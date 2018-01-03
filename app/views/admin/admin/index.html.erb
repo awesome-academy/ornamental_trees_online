@@ -1,0 +1,38 @@
+<div class="container" id="customize-home-container">
+  <div class="row"></div>
+  <div class="row">
+    <%= render "leftmenu" %>
+    <div class="col s12 m12 l9" id="container-products">
+      <ul>
+        <li class="item_category_parent center">
+          <%= t ".dashboard" %>
+        </li>
+      </ul>
+      <table class="centered">
+        <thead>
+        <tr>
+          <th><h5><%= t ".user" %></h5></th>
+          <th><h5><%= t ".product" %></h5></th>
+        </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <%= link_to admin_users_path, class: "btn btn btn-lg" do %>
+                <span class="glyphicon glyphicon-log-in"></span>
+                <%= @user.count %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to admin_products_path, class: "btn btn btn-lg" do %>
+                <span class="glyphicon glyphicon-log-in"></span>
+                <%= @products.count %>
+              <% end %></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

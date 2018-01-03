@@ -1,0 +1,51 @@
+<table>
+  <thead>
+  <tr>
+    <th class="mail-order-th" id="th-table-item-title"><%= t".item"%></th>
+    <th class="mail-order-th-name"><%= t".name"%></th>
+    <th class="center mail-order-th"><%= t".quantity"%></th>
+    <!-- <th class="left mail-order-th" id="th-table-space-title">&nbsp;</th> -->
+    <th class="mail-order-th"><%= t".price"%></th>
+  </tr>
+  </thead>
+  <tbody>
+    <%
+    unless @carts.nil?
+      @carts.each do |cart| %>
+      <%
+        product = cart.product
+        quantity = cart.quantity
+      %>
+      <tr>
+        <td id="td-table-image-item">
+        </td>
+
+        <td>
+          <%= product.name %>
+        </td>
+
+        <td class="center">
+          <%= quantity %>
+        </td>
+
+        <td id="td-adj-number">
+          <%= product.price * quantity %>
+        </td>
+
+        <td>
+          <%= link_to (t ".Delete"), shopping_cart_path(product_id: product.id) , method: :delete %>
+        </td>
+
+      </tr>
+
+    <% end
+    end%>
+      <tr class="total_line">
+        <td>&nbsp;</td>
+        <td class="td-table-space-total">&nbsp;</td>
+        <td class="center"><b><%= t".total"%></b></td>
+        <td class="td-table-space-total">&nbsp;</td>
+
+      </tr>
+  </tbody>
+</table>

@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col s12 l4">
+    <div class="card z-depth-2">
+      <div class="title-course-banner">
+        <%= @product.name %>
+      </div>
+      <div class="center container-price">
+        <div class="price-text-course">
+          <span id="price-current-product">
+            <%= t ".price" %><%= @product.price %>
+          </span>
+        </div>
+      </div>
+
+      <div class="card-action center">
+        <div class="container-payment-button">
+          <%= form_for @product do |f| %>
+            <%= f.submit (t".buy") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 l8">
+    <%= t ".category" %><%= @product.category.name %>
+    <br>
+    <%= t ".description" %>
+  </div>
+</div>
+<div class="row">
+  <div class="card medium">
+    <% @product.images.each do |img|  %>
+      <div class="col s12 l3">
+        <%= image_tag("#{img.image_link}", class: "img-size") %>
+      </div>
+    <% end %>
+  </div>
+</div>

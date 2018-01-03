@@ -1,0 +1,127 @@
+vi:
+  users:
+    new:
+      username: "Tên đăng nhập"
+      email: "Email"
+      name: "Họ và tên"
+      password: "Mật khẩu"
+      signup: "Đăng ký"
+      password_confirmation: "Xác nhận mật khẩu"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      gender: "Giới tính"
+      male: "Nam"
+      female: "Nữ"
+    create:
+      success: "Chào mừng bạn ghé thăm Shop!"
+  sessions:
+    new:
+      email: "Email"
+      password: "mật khẩu"
+      loggin: "Đăng nhập"
+      new_user: "chưa có tài khoản"
+      signup: "Đăng ký"
+      login_google: "Log in with Google"
+      login_facebook: "Log in with Facebook"
+      login_twiiter: "Log in with Twiiter"
+    create:
+      danger: "email / mật khẩu không hợp lệ"
+  products:
+    show:
+      buy: "Mua ngay"
+      name: "Tên sản phẩm:"
+      price: "Giá: "
+      category: "Phân loại:"
+      danger: "Không tìm thấy sản phẩm"
+      success: "Sản phẩm bạn chọn"
+  layouts:
+    application:
+      title: "Hoa Yeu Thuong"
+    header:
+      product: "Sản Phẩm"
+      login: "Đăng Nhập"
+      signup: "Đăng Kí"
+      setting: "Cài Đặt"
+      history_order: "Lịch sử mua hàng"
+      logout: "Đăng xuất"
+    footer:
+      logo: "Sun Flower"
+      connect: "Lien He"
+      about_us: "Gioi Thieu"
+      help: "Ho Tro"
+      terms: "Terms of Use"
+  admin:
+    products:
+      new:
+        title: "Thêm sản phẩm"
+        name: "Tên sản phẩm"
+        category: "Danh mục"
+        price: "Giá"
+        quantity: "Số lượng"
+        add: "Xác nhận"
+        nocategory: "Không có danh mục nào"
+      edit:
+        title: "Edit Product"
+        back: "Back"
+        update: "Update Succes"
+      create:
+        success: "Sản phẩm đã được thêm"
+      destroy:
+        success: "Xóa sản phẩm"
+        danger: "Không thể xóa sản phẩm này"
+      product:
+        del: "Xóa"
+        edit: "Sửa"
+      index:
+        new: "Thêm sản phẩm"
+    users:
+      destroy:
+        success: "Xoa nguoi dung thanh cong"
+        danger: "Khong the xoa nguoi nay"
+    private:
+      logged_in:
+        pls_login: "Ban chua dang nhap"
+    admin:
+      index:
+        dashboard: "Dashboard"
+        user: "Total Users"
+        product: "Total Product"
+        delete: "Delete product"
+        sure: "You sure?"
+        new: "New Product"
+      leftmenu:
+        menu: "Menu"
+        user: "User"
+        product: "Product"
+      users:
+        ID: "ID"
+        name: "Name"
+        email: "Email"
+        date: "Created Date"
+        del: "Delete"
+  shared:
+    product:
+      cart: "Thêm vào giỏ hàng"
+      index:
+        id: "ID"
+        product_name: "Tên Sản Phẩm"
+        price: "Giá"
+        quantity: "Số lượng"
+        detele: "Xóa"
+        edit: "Sửa"
+    header:
+        product: "Sản phẩm"
+        signup: "Đăng ký"
+        login: "Đăng nhập"
+        user: "Tài khoản"
+        logout: "Đăng xuất"
+  static_pages:
+    home:
+      search: "Nhập và Enter để tìm kiếm"
+  shopping_carts:
+    show:
+      item: "San Pham"
+      name: "Ten"
+      quantity: "So Luong"
+      price: "Gia"
+      total: "Thanh Tien"

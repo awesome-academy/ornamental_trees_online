@@ -1,0 +1,20 @@
+<div class="col s12 m12 l3 left-menu-tab">
+    <div id="leftpanel">
+      <div class="card">
+        <ul>
+          <li class="item_category_parent">
+            <i class="material-icons md-36 icon-cate">airplay</i>
+            <%= link_to (t ".menu"), admin_root_path %>
+          </li>
+          <li class="item_category">
+            <i class="material-icons md-36 icon-cate">account_circle</i>
+            <%= link_to (t "admin.admin.leftmenu.user"), admin_users_path %>
+          </li>
+          <li class="item_category">
+            <i class="material-icons md-36 icon-cate">local_florist</i>
+            <%= link_to (t "admin.admin.leftmenu.product"), admin_products_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
+</div>

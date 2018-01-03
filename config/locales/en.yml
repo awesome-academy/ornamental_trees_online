@@ -1,1 +1,128 @@
 en:
+  users:
+    new:
+      username: "Username"
+      email: "Email"
+      name: "Name"
+      password: "Password"
+      signup: "Sign up"
+      password_confirmation: "Confirmation"
+      address: "Address"
+      phone: "Phone number"
+      gender: "Gender"
+      male: "Male"
+      female: "Female"
+    create:
+      success: "Welcome to the Flower Shop!"
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      loggin: "Log in"
+      new_user: "New user?"
+      signup: "Sign up now"
+      login_google: "Log in with Google"
+      login_facebook: "Log in with Facebook"
+      login_twiiter: "Log in with Twiiter"
+    create:
+      danger: "invalid email/password combination"
+  products:
+    show:
+      buy: "Buy now"
+      name: "Product Name:"
+      price: "Price: "
+      category: "Category:"
+      danger: "Product not found"
+      success: "Product found"
+  layouts:
+    application:
+      title: "Love Flower"
+    header:
+      product: "Products"
+      login: "Login"
+      signup: "Sign Up"
+      setting: "Account Settings"
+      history_order: "History Orders"
+      logout: "Logout"
+    footer:
+      logo: "Sun Flower"
+      connect: "Connect us"
+      about_us: "About Us"
+      help: "Help"
+      terms: "Terms of Use"
+  admin:
+    products:
+      new:
+        title: "New product"
+        name: "Product name"
+        category: "Category"
+        price: "Price"
+        quantity: "Quantity"
+        add: "Summit"
+        nocategory: "Have no category"
+      edit:
+        title: "Edit Product"
+        back: "Back"
+        update: "Update Succes"
+      create:
+        success: "Product was added"
+      destroy:
+        success: "Product was deleted"
+        danger: "Can't delete this product"
+      product:
+        del: "Delete"
+        edit: "Edit"
+      index:
+        new: "New Product"
+    users:
+      destroy:
+        success: "User deleted"
+        danger: "Can't delete this user"
+    private:
+      logged_in:
+        pls_login: "Please login"
+    admin:
+      index:
+        dashboard: "Dashboard"
+        user: "Total Users"
+        product: "Total Product"
+        delete: "Delete product"
+        sure: "You sure?"
+        new: "New Product"
+      leftmenu:
+        menu: "Menu"
+        user: "User"
+        product: "Product"
+        users:
+        ID: "ID"
+        name: "Name"
+        email: "Email"
+        date: "Created Date"
+      users:
+        del: "Delete"
+  shared:
+    product:
+      cart: "Add to cart"
+      index:
+        id: "ID"
+        product_name: "Product Name"
+        price: "Price"
+        quantity: "Quantity"
+        detele: "Detele"
+        edit: "Edit"
+      header:
+        product: "Products"
+        signup: "Sign Up"
+        login: "Login"
+        user: "User"
+        logout: "Logout"
+  static_pages:
+    home:
+      search: "Type and ENTER for search"
+  shopping_carts:
+    show:
+      item: "Item"
+      name: "Name"
+      quantity: "Quantity"
+      price: "Price"
+      total: "Total"

@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row"></div>
+  <div class="row"></div>
+  <div class="row">
+    <div class="col s12 m12 l4 center">
+      <div class="card-panel">
+        <div class="row s12">
+          <a class="btn red darken-1" href="#"><i class="fa fa-google-plus"></i>&nbsp; &nbsp; <%= t ".login_google" %>
+          </a>
+        </div>
+        <div class="row s12">
+          <a class="btn blue darken-4" href="#"><i class="fa fa-facebook"></i>&nbsp; &nbsp; <%= t ".login_facebook" %>
+          </a>
+        </div>
+
+        <div class="row s12">
+          <a class="btn cyan darken-1" href="#"><i class="fa fa-twitter"></i>&nbsp; &nbsp; <%= t ".login_twiiter" %> &nbsp; &nbsp;</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m12 l8">
+      <div class="card">
+        <div class="title-sign-up-page center cyan darken-3">
+          <%= t ".signup" %>
+        </div>
+        <div class="card-content">
+          <%= form_for(@user, :html => {:class => 'new_user'}) do |f| %>
+            <div class="row">
+
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">account_circle</i>
+                  <%= f.text_field :username, class: "validate", placeholder: (t ".username"), type:"text" %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">account_circle</i>
+                  <%= f.text_field :name, class: "validate", placeholder: (t ".name") %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">email</i>
+                  <%= f.email_field :email, autocomple: "on", class: "validate", placeholder: (t ".email") %>
+                  <i class="material-icons md-36" id="InforCheckEmailMatch" style="display: none;">done</i>
+                  <i class="material-icons md-36" id="InforCheckEmailError" style="display: none;">error</i>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">lock_outline</i>
+                  <%= f.password_field :password, class: "validate", placeholder: (t ".password") %>
+                  <i class="material-icons md-36" id="InforCheckPasswordLength" style="display: none;">done</i>
+                  <i class="material-icons md-36" id="InforCheckPasswordLengthError" style="display: none;">error</i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">lock_outline</i>
+                  <%= f.password_field :password_confirmation, class: "validate", placeholder: (t ".password_confirmation") %>
+                  <i class="material-icons md-36" id="InforCheckPasswordMatch" style="display: none;">done</i>
+                  <i class="material-icons md-36" id="InforCheckPasswordError" style="display: none;">error</i>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">home</i>
+                  <%= f.text_field :address, class: "validate", placeholder: (t ".address") %>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 sign-up-fields">
+                  <i class="material-icons md-36 prefix icon-account-material">phone</i>
+                  <%= f.text_field :phone, class: "validate", placeholder: (t ".phone") %>
+                </div>
+              </div>
+
+              <form action="#" class="row center">
+                <p>
+                  <input name="group1" type="radio" id="female" value="1"/>
+                  <label for="female"><%= t ".female" %></label>
+                  <input name="group1" type="radio" id="male" value="0"/>
+                  <label for="male"><%= t ".male" %></label>
+                </p>
+              </form>
+
+              <div class="row center">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                  <%= f.submit "Sign Up", class: "button" %>
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

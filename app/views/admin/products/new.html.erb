@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="title-sign-up-page center">
+    <%= t ".title" %>
+  </div>
+  <div class="card-content">
+    <%= render "form", product: @product %>
+    <div>
+      <%= link_to (t "admin.products.edit.back"), admin_products_path, :class => "waves-effect waves-light btn" %>
+    </div>
+  </div>
+</div>

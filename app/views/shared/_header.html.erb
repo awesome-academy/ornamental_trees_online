@@ -1,0 +1,78 @@
+<header>
+  <nav class="cyan z-depth-2" id="nav-header-enziin">
+    <div class="container" id="customize-home-container">
+      <div class="nav-wrapper">
+        <%= link_to image_tag('logo.png'), shopping_cart_path, class: "brand-logo" %>
+        <ul class="right hide-on-med-and-down">
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to root_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">home</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".home" %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to products_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icon-in-top-menu">device_hub</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".product" %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <% if logged_in? %>
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to users_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">account_box</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".user" %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to logout_path, method: :delete do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">exit_to_app</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".logout" %></li>
+              <% end %>
+            </ul>
+          </li>
+
+          <% else %>
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to signup_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">person_add</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".signup" %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li class="li-list-item-top-menu">
+            <ul class="ul-list-item-header">
+              <%= link_to login_path do %>
+                <li class="li-list-item-header">
+                  <i class="material-icons md-24 icons-task-header-menu">lock</i>
+                </li>
+                <li class="li-list-item-header"><%= t ".login" %></li>
+              <% end %>
+          <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

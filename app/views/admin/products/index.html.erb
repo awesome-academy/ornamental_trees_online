@@ -1,0 +1,24 @@
+<div class="row"></div>
+<div class="row">
+  <%= render "admin/admin/leftmenu" %>
+  <div class="col s12 m12 l9 home">
+    <table class="highlight">
+      <thead>
+      <tr>
+        <th><%= t "shared.product.index.id" %></th>
+        <th><%= t "admin.shared.product.index.product_name" %></th>
+        <th><%= t "admin.shared.product.index.price" %></th>
+        <th><%= t "admin.shared.product.index.quantity" %></th>
+        <th><%= t "admin.shared.product.index.category" %></th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @products %>
+      </tbody>
+    </table>
+      <%= link_to t(".new"), new_admin_product_path, :class => "waves-effect waves-light btn" %>
+  </div>
+</div>
+
+

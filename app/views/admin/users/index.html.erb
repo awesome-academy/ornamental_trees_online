@@ -1,0 +1,21 @@
+<div class="row"></div>
+<div class="row">
+  <%= render "admin/admin/leftmenu" %>
+  <div class="col s12 m12 l9 home">
+    <table class="highlight">
+      <thead>
+      <tr>
+        <th><%= t ".id" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".email" %></th>
+        <th><%= t ".date" %></th>
+        <th><%= t ".del" %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render partial: "users", collection: @user %>
+      </tbody>
+    </table>
+    <%= will_paginate @user %>
+  </div>
+</div>
