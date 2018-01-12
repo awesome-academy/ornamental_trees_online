@@ -1,0 +1,39 @@
+<div class="container" id="customize-home-container">
+  <div class="row"></div>
+  <div class="row">
+    <%= render "admin/admin/leftmenu" %>
+    <div class="center">
+      <form>
+        <p>
+          <strong><%= t ".username" %>></strong>
+          <%= @user.username %>
+        </p>
+
+        <p>
+          <strong><%= t ".name" %>></strong>
+          <%= @user.name %>
+        </p>
+
+        <p>
+          <strong><%= t ".email" %></strong>
+          <%= @user.email %>
+        </p>
+
+        <p>
+          <strong><%= t ".address" %></strong>
+          <%= @user.name %>
+        </p>
+
+        <p>
+          <strong><%= t ".phone" %></strong>
+          <%= @user.phone %>
+        </p>
+
+        <p>
+          <strong><%= t ".gender" %></strong>
+          <%= @user.gender %>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

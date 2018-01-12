@@ -14,6 +14,13 @@ vi:
       female: "Nữ"
     create:
       success: "Chào mừng bạn ghé thăm Shop!"
+    show:
+      username: "Tên đăng nhập:"
+      name: "Họ và tên:"
+      email: "Email:"
+      address: "Địa chỉ:"
+      phone: "Số điện thoại:"
+      gender: "Giới tính:"
   sessions:
     new:
       email: "Email"

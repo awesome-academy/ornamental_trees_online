@@ -14,6 +14,13 @@ en:
       female: "Female"
     create:
       success: "Welcome to the Flower Shop!"
+    show:
+      username: "Username:"
+      name: "Name:"
+      email: "Email:"
+      address: "Address:"
+      phone: "Phone:"
+      gender: "Gender:"
   sessions:
     new:
       email: "Email"
