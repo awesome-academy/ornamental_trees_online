@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :admin do
-    get 'categories/new'
-  end
-
-  get 'categories/new'
-
   get "auth/:provider/callback", to: "sessions#create"
   get "auth/failure", to: redirect("/")
   get "static_pages/about"
@@ -24,11 +18,9 @@ Rails.application.routes.draw do
   resources :order_details, only: [:create, :destroy]
   namespace :admin do
     root "admin#index"
-    resources :users
-    resources :products
-    resources :categories
-    resources :orders
-    #post "/write" to: "orders"
+    resources :users, only: [:index, :show, :destroy]
+    resources :products, :categories
+    resources :orders, only: [:index, :show, :destroy]
   end
 
   root "static_pages#home"
