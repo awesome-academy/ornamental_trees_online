@@ -47,13 +47,12 @@ class Order < ApplicationRecord
     @order = self
 
     time = Time.now.to_i
-
     joinMd5 = "#{@user.email}-#{time.to_s}-#{ENV['SECRET_CODE_CREATE_ORDER_FROM_EMAIL']}"
     token_key = Digest::MD5.hexdigest joinMd5
     token_key = token_key.upcase
 
     if @order.status == 'Complete' && @user.present?
-      SendEmailOrderJob.perform_later(@user, @order, token_key, time)
+      SendEmailOrderJob.perform_now(@user, @order, token_key, time)
     end
   end
 end

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+
   def index
     if params[:sort_product] == "1"
       @products = Product.search_by_name(params[:search_text])
@@ -9,6 +10,9 @@ class ProductsController < ApplicationController
     else
       @products = Product.search_by_name(params[:search_text])
                       .order_desc.paginate(page: params[:page])
+    end
+    respond_to do |format|
+      format.js {}
     end
   end
 

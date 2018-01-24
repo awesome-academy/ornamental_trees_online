@@ -1,5 +1,27 @@
 class OrdersController < ApplicationController
 
+  def history
+    email = params[:email].strip
+    token_key = params[:token_key].strip
+    time = params[:time].strip
+
+    joinMd5 = "#{email}-#{time}-#{ENV['SECRET_CODE_CREATE_ORDER_FROM_EMAIL']}"
+    token_key_calculation = Digest::MD5.hexdigest joinMd5
+    token_key_calculation = token_key_calculation.upcase
+
+    time_convert = time.to_i
+
+    user = User.find_by_email(email)
+
+    if user.present? && token_key_calculation == token_key && ((Time.now.to_i - time_convert) < (24 * 3600))
+      sign_in user
+      redirect_to my_orders_path
+    else
+      flash[:notice] = 'Please login!'
+      redirect_to root_path
+    end
+  end
+
   def new
     @order = Order.new
     carts = Cart.new_cart request.session_options[:id]
