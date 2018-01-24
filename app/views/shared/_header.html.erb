@@ -6,11 +6,14 @@
         <ul class="right hide-on-med-and-down">
           <li class="li-list-item-top-menu">
             <ul class="ul-list-item-header">
-              <%= link_to shopping_cart_path do %>
-                <li class="li-list-item-header">
-                  <i class="material-icons md-24 icons-task-header-menu">add_shopping_cart</i>
-                </li>
-                <li class="li-list-item-header"><%= t "shared.product.shop_cart" %></li>
+              <% if logged_in? && admin? %>
+              <% else %>
+                <%= link_to shopping_cart_path do %>
+                  <li class="li-list-item-header">
+                    <i class="material-icons md-24 icons-task-header-menu">add_shopping_cart</i>
+                  </li>
+                  <li class="li-list-item-header"><%= t "shared.product.shop_cart" %></li>
+                <% end %>
               <% end %>
             </ul>
           </li>
@@ -38,8 +41,7 @@
                   <% end %>
                 </ul>
               </li>
-            <% end %>
-
+            <% else %>
             <li class="li-list-item-top-menu">
               <ul class="ul-list-item-header">
                 <%= link_to user_path(current_user) do %>
@@ -50,6 +52,7 @@
                 <% end %>
               </ul>
             </li>
+            <% end %>
 
             <li class="li-list-item-top-menu">
               <ul class="ul-list-item-header">

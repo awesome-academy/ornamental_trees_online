@@ -35,6 +35,11 @@ class OrdersController < ApplicationController
       @order = @current_user.orders.build order_params
       if @order.save!
         flash[:success] = t ".success"
+        carts = Cart.new_cart request.session_options[:id]
+        @order.order_details.each do |order_detail|
+          order_detail.product.update_attributes quantity: order_detail.product.quantity - order_detail.quantity
+        end
+        carts.destroy_all
         redirect_to root_url
       else
         redirect_to new_order_url
@@ -53,12 +58,9 @@ class OrdersController < ApplicationController
     if @order.present?
       @order.destroy
       flash[:success] = t ".success"
+      redirect_to user_url(@current_user)
     else
       flash[:danger] = t ".danger"
-    end
-    respond_to do |format|
-      format.html { redirect_to @user }
-      format.js
     end
   end
 
